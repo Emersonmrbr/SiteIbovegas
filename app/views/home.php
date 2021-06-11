@@ -23,6 +23,28 @@ Todo o conteudo do corpo do site se encotra nessa seção.
    </svg>
    <h4 class="c-content__trader">João da Silva</h4>
   </section>
+  <section class="c-content__current-value">
+   <table class="c-content__table">
+    <tr>
+     <th></th>
+     <th></th>
+     <th></th>
+     <th></th>
+     <th></th>
+     <th></th>
+     <th></th>
+    </tr>
+    <tr>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+   </table>
+  </section>
   <p class="c-content__current-value">R$ 116.000,00</p>
   <p class="c-content__current-profit">R$ 16.000,00</p>
   <p class="c-content__percentage">R$ 16%</p>
