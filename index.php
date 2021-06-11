@@ -55,8 +55,7 @@
   </main>
 
  </div>
- <script src="app/assets/js/header.js"></script>
- <!-- <script src="app/assets/js/footer.js"></script> -->
+ <script src="app/assets/js/index.js"></script>
 </body>
 
 </html>
