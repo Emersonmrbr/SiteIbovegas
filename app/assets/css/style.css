@@ -748,6 +748,25 @@ body {
   margin-right: 0.3125rem;
 }
 
+.c-content__current-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 57.9375em) {
+  .c-content__current-value {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .u-colored {
   color: #b57ba6;
 }

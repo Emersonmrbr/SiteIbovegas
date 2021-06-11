@@ -25,29 +25,32 @@ Todo o conteudo do corpo do site se encotra nessa seção.
   </section>
   <section class="c-content__current-value">
    <table class="c-content__table">
-    <tr>
-     <th></th>
-     <th></th>
-     <th></th>
-     <th></th>
-     <th></th>
-     <th></th>
-     <th></th>
+    <tr class="c-content__table-title">
+     <th>current value</th>
+     <th>current profit</th>
+     <th>percent</th>
+
     </tr>
-    <tr>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
+    <tr class="c-content_table-item">
+     <td>R$ 110.00,00</td>
+     <td>R$ 10.00,00</td>
+     <td>10,00%</td>
+
+    </tr>
+   </table>
+   <table class="c-content__table">
+    <tr class="c-content__table-title">
+     <th colspan="2">smart buy</th>
+     <th colspan="2">dumb buy</th>
+    </tr>
+    <tr class="c-content_table-item">
+     <td>LAME4</td>
+     <td>10,00%</td>
+     <td>NINJ3</td>
+     <td>-8.00%</td>
     </tr>
    </table>
   </section>
-  <p class="c-content__current-value">R$ 116.000,00</p>
-  <p class="c-content__current-profit">R$ 16.000,00</p>
-  <p class="c-content__percentage">R$ 16%</p>
   <p class="ranking">1</p>
  </a>
 

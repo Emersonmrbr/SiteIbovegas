@@ -44,4 +44,11 @@ $componente-name: "c-content";
     height: auto;
     margin-right: ($global-module-size / 10);
   }
+  &__current-value {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(medium-up) {
+      flex-direction: row;
+    }
+  }
 }
