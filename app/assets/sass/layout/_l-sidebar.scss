@@ -1,0 +1,24 @@
+$componente-name: "l-sidebar";
+
+.#{$componente-name} {
+  background-color: map-color(map-header-background);
+  color: map-color(map-header-fore);
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  width: 0;
+  overflow: hidden;
+  z-index: z-index(above);
+  transition: $transition-function-header;
+  &.is-open {
+    width: ($global-module-size * 4);
+    @include breakpoint(medium-up) {
+      width: ($global-module-size * 5);
+    }
+  }
+  @include breakpoint(medium-up) {
+    width: ($global-module-size * 5);
+  }
+}

@@ -1,0 +1,12 @@
+$componente-name: "l-body";
+
+.#{$componente-name} {
+  background-color: map-color(map-white);
+  display: grid;
+  grid: "sidebar main" auto "sidebar main " auto/ auto 3fr;
+  margin: 0 auto;
+  max-width: $global-max-width;
+  @include breakpoint(medium-up) {
+    grid: "sidebar main" auto "sidebar main " auto/ ($global-module-size * 5) 3fr;
+  }
+}

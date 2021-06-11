@@ -1,0 +1,47 @@
+$componente-name: "c-content";
+
+.#{$componente-name} {
+  display: grid;
+  gap: ($global-module-size / 2);
+  grid-area: content;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 ($global-module-size / 2);
+  width: 100%;
+  @include breakpoint(extra-large-up) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 ($global-module-size * 2);
+  }
+  &__card {
+    background-color: map-color(map-white);
+    border-radius: $global-radius;
+    border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+      solid;
+    box-shadow: rem(1) rem(1)
+      darken($color: map-color(map-main-background), $amount: 10%);
+    color: inherit;
+    height: auto;
+    padding: ($global-module-size / 2);
+    width: 100%;
+    @include breakpoint(medium-up) {
+      width: ($global-module-size * 12);
+    }
+    @include breakpoint(extra-large-up) {
+      height: ($global-module-size * 5);
+      width: ($global-module-size * 11);
+    }
+    @include breakpoint(extra-extra-large-up) {
+      width: ($global-module-size * 12);
+    }
+  }
+  &__name {
+    display: flex;
+  }
+  &__icon {
+    width: ($global-module-size / 2);
+    height: auto;
+    margin-right: ($global-module-size / 10);
+  }
+}

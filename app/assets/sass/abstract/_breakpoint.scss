@@ -1,0 +1,81 @@
+// @see https://desenvolvimentoparaweb.com/css/css-breakpoints-maneira-correta/
+
+@mixin breakpoint($point) {
+  @if $point == small-only {
+    @media (max-width: 37.4375em) {
+      // 599px
+      @content;
+    }
+  } @else if $point == small-up {
+    @media (min-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+
+  @if $point == small-medium-only {
+    @media (max-width: 47.9375em) {
+      // 767px
+      @content;
+    }
+  } @else if $point == small-medium-up {
+    @media (min-width: 48em) {
+      // 768px
+      @content;
+    }
+  } @else if $point == medium-only {
+    @media (max-width: 56.1875em) {
+      // 899px
+      @content;
+    }
+  } @else if $point == medium-up {
+    @media (min-width: 57.9375em) {
+      // 900px
+      @content;
+    }
+  } @else if $point == medium-large-only {
+    @media (max-width: 58em) {
+      // 928px
+      @content;
+    }
+  } @else if $point == medium-large-up {
+    @media (min-width: 61.25em) {
+      // 980px
+      @content;
+    }
+  } @else if $point == large-only {
+    @media (max-width: 74.9375em) {
+      // 1199px
+      @content;
+    }
+  } @else if $point == large-up {
+    @media (min-width: 75em) {
+      // 1200px
+      @content;
+    }
+  } @else if $point == extra-large-only {
+    @media (max-width: 99.4375) {
+      // 1591px
+      @content;
+    }
+  } @else if $point == extra-large-up {
+    @media (min-width: 99.5em) {
+      // 1592px
+      @content;
+    }
+  } @else if $point == extra-extra-large-only {
+    @media (max-width: 104.6875em) {
+      // 1691px
+      @content;
+    }
+  } @else if $point == extra-extra-large-up {
+    @media (min-width: 105.75em) {
+      // 1692px
+      @content;
+    }
+  } @else {
+    @media (min-width: ($point / 16) + "em") {
+      @content;
+    }
+  }
+}

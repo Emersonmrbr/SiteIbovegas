@@ -1,0 +1,12 @@
+$componente-name: "l-main";
+
+.#{$componente-name} {
+  background-color: map-color(map-main-background);
+  color: map-color(map-main-fore1);
+  display: grid;
+  grid-area: main;
+  grid: "menu-secundary" ($global-module-size * 1.64) "content" 1fr / 1fr;
+  margin: 0 auto;
+  width: 100%;
+  row-gap: ($global-module-size / 2);
+}

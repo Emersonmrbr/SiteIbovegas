@@ -1,0 +1,17 @@
+$componente-name: "l-header";
+
+.#{$componente-name} {
+  align-items: center;
+  background-color: map-color(map-white);
+  border-bottom: rem(1) lighten(map-color(map-header-background), 10%) solid;
+  display: flex;
+  flex-direction: row;
+  height: ($global-module-size * 1.64);
+  justify-content: space-between;
+  max-width: $global-max-width - ($global-module-size * 5);
+  padding: 0 ($global-module-size/2);
+  position: fixed;
+  width: 100%;
+  @include breakpoint(medium-up) {
+  }
+}
