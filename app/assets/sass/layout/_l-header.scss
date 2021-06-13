@@ -15,6 +15,7 @@ $componente-name: "l-header";
   text-transform: capitalize;
   transition: $transition-function-header;
   width: 100%;
+  z-index: z-index(above);
 
   @include breakpoint(small-medium-up) {
     grid-template-columns: ($global-module-size * 4) repeat(2, auto);

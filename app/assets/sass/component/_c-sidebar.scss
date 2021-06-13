@@ -12,8 +12,8 @@ $componente-name: "c-sidebar";
   &__item {
     align-items: center;
     display: flex;
-    height: 100%;
     flex-wrap: nowrap;
+    height: 100%;
   }
   &__link {
     color: inherit;

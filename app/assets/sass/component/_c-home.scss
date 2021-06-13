@@ -13,11 +13,11 @@ $componente-name: "c-home";
   width: 100%;
   &__card {
     background-color: map-color(map-white);
+    border-radius: $global-radius;
     border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
       solid;
     box-shadow: rem(1) rem(1)
       darken($color: map-color(map-main-background), $amount: 10%);
-    border-radius: $global-radius;
     color: inherit;
     height: auto;
     padding: ($global-module-size / 2);
@@ -47,17 +47,17 @@ $componente-name: "c-home";
       grid-template-columns: repeat(3, 1fr);
     }
     @include breakpoint(large-up) {
-      grid-template-columns: repeat(5, 1fr);
       column-gap: ($global-module-size / 10);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
   &__table {
     background-color: inherit;
+    border-radius: $global-radius;
     border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
       solid;
     box-shadow: rem(1) rem(1)
       darken($color: map-color(map-main-background), $amount: 10%);
-    border-radius: $global-radius;
     color: inherit;
     display: flex;
     flex-direction: column;
