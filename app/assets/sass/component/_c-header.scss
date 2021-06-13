@@ -27,7 +27,6 @@ $slice-width: ($global-module-size / 1.5);
 
     @include breakpoint(small-medium-up) {
       background-position: -100% 100%;
-      // background-color: map-color(map-header-background);
     }
   }
   &__component {
