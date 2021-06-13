@@ -1,16 +1,7 @@
-<?php
-// ===================
-// COMEÇO DO CABEÇALHO
-// ===================
-
-// Todo o conteudo do cabeçalho se encotra nessa seção.
-
-?>
 <h1 style="display: none;">IBOVegas</h1>
 <h2 style="display: none;">Uma nova era de traders.</h2>
 <h2 style="display: none;">Traders das sombras</h2>
 <h2 style="display: none;">Devia ter vendido ontem</h2>
-
 
 <nav class="c-sidebar">
  <ul class="c-sidebar__list">

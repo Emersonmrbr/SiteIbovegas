@@ -1,10 +1,3 @@
-<!--
-=======================
-COMEÇO DO CORPO DO SITE
-
-Todo o conteudo do corpo do site se encotra nessa seção.
-=======================
--->
 <div class="c-home">
  <a class="c-home__card" href="?pagina=home">
   <section class="c-home__name">
@@ -723,9 +716,3 @@ Todo o conteudo do corpo do site se encotra nessa seção.
  </a>
 
 </div>
-
-<!--
-=======================
-FINAL DO CORPO DO SITE
-=======================
--->
