@@ -26,7 +26,8 @@ $slice-width: ($global-module-size / 1.5);
     }
 
     @include breakpoint(small-medium-up) {
-      background-color: map-color(map-header-background);
+      background-position: -100% 100%;
+      // background-color: map-color(map-header-background);
     }
   }
   &__component {
@@ -36,6 +37,7 @@ $slice-width: ($global-module-size / 1.5);
     @include breakpoint(small-medium-up) {
       fill: map-color(map-main-fore1);
       width: ($global-module-size * 3);
+      fill: map-color(map-header-fore);
     }
     @include breakpoint(medium-up) {
       width: ($global-module-size * 4);
