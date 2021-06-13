@@ -4,15 +4,15 @@ $componente-name: "l-sidebar";
   background-color: map-color(map-header-background);
   color: map-color(map-header-fore);
   display: flex;
-  position: fixed;
   flex-direction: column;
   height: 100%;
   margin: 0 auto;
-  width: 0;
   overflow: hidden;
-  z-index: z-index(above);
-  transition: $transition-function-header;
+  position: fixed;
   top: ($global-module-size * 1.64);
+  transition: $transition-function-header;
+  width: 0;
+  z-index: z-index(above);
   &.is-open {
     width: ($global-module-size * 4);
 

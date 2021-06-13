@@ -1,13 +1,19 @@
 $componente-name: "c-header";
-$slice-width: ($global-module-size / 1.5);
 $slice-height-big: ($global-module-size / 13);
 $slice-height: ($global-module-size / 20);
 $slice-margin: ($global-module-size / 10);
 $slice-translate: $slice-height-big / 2;
+$slice-width: ($global-module-size / 1.5);
 
 .#{$componente-name} {
   &__logo {
     align-items: center;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      to right,
+      map-color(map-white) 50%,
+      map-color(map-header-background) 50%
+    );
     background-color: map-color(map-white);
     display: flex;
     grid-column: 1/2;
@@ -16,7 +22,7 @@ $slice-translate: $slice-height-big / 2;
     transition: $transition-function-header;
     width: 100%;
     &.is-open {
-      background-color: map-color(map-header-background);
+      background-position: -100% 100%;
     }
 
     @include breakpoint(small-medium-up) {
@@ -28,13 +34,14 @@ $slice-translate: $slice-height-big / 2;
     transition: $transition-function-header;
     width: ($global-module-size * 2.4);
     @include breakpoint(small-medium-up) {
+      fill: map-color(map-main-fore1);
       width: ($global-module-size * 3);
-      fill: map-color(map-header-fore);
     }
     @include breakpoint(medium-up) {
       width: ($global-module-size * 4);
     }
     &.is-open {
+      transition: $transition-function-header;
       fill: map-color(map-header-fore);
     }
   }
@@ -75,14 +82,14 @@ $slice-translate: $slice-height-big / 2;
     height: $slice-height;
     margin: $slice-margin 0;
     padding: 0;
+    transform-origin: 50% 50%;
     transition-delay: $transition-daley-middle;
     transition: $transition-function-header-mobile;
-    transform-origin: 50% 50%;
     width: $slice-width;
     &.is-open {
-      transform-origin: 50% 50%;
       height: 0;
       margin: 0;
+      transform-origin: 50% 50%;
       transition-delay: $transition-daley-none;
       width: 0;
     }

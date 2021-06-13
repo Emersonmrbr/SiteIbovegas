@@ -1,39 +1,39 @@
 $componente-name: "c-home";
 
 .#{$componente-name} {
+  align-items: center;
   display: grid;
   gap: ($global-module-size / 2);
   grid-area: content;
   grid-template-columns: auto;
   justify-content: center;
   justify-items: center;
-  align-items: center;
   margin: 0 auto;
   padding: 0 ($global-module-size / 2);
   width: 100%;
   &__card {
     background-color: map-color(map-white);
-    border-radius: $global-radius;
     border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
       solid;
     box-shadow: rem(1) rem(1)
       darken($color: map-color(map-main-background), $amount: 10%);
+    border-radius: $global-radius;
     color: inherit;
     height: auto;
     padding: ($global-module-size / 2);
     width: auto;
   }
   &__name {
+    align-items: center;
     display: flex;
-    font-size: $global-font-size-large;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    font-size: $global-font-size-large;
   }
   &__icon {
-    width: ($global-module-size / 2);
     height: auto;
     margin-right: ($global-module-size / 10);
+    width: ($global-module-size / 2);
   }
   &__trader {
     flex: 1;
@@ -53,11 +53,11 @@ $componente-name: "c-home";
   }
   &__table {
     background-color: inherit;
-    border-radius: $global-radius;
     border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
       solid;
     box-shadow: rem(1) rem(1)
       darken($color: map-color(map-main-background), $amount: 10%);
+    border-radius: $global-radius;
     color: inherit;
     display: flex;
     flex-direction: column;
@@ -78,14 +78,14 @@ $componente-name: "c-home";
     width: 100%;
   }
   &__content-item {
+    align-items: center;
+    align-self: center;
+    color: map-color(map-header-background);
     display: flex;
     flex-direction: row;
-    align-self: center;
-    align-items: center;
-    justify-content: space-around;
-    color: map-color(map-header-background);
     flex: 1;
     font-size: $global-font-size-medium;
+    justify-content: space-around;
     justify-self: center;
     padding: 0 ($global-module-size / 10);
     text-align: center;
@@ -96,18 +96,18 @@ $componente-name: "c-home";
     display: flex;
     justify-content: flex-end;
     p {
-      background-color: map-color(map-header-background);
-      color: map-color(map-header-fore);
-      font-size: $global-font-size-larger;
-      font-weight: $global-font-weight-bolder;
-      display: flex;
       align-items: center;
-      justify-content: center;
+      background-color: map-color(map-header-background);
       border-radius: 100%;
       border: 1px solid map-color(map-header-background);
-      width: $global-module-size * 1.2;
+      color: map-color(map-header-fore);
+      display: flex;
+      font-size: $global-font-size-larger;
+      font-weight: $global-font-weight-bolder;
       height: $global-module-size * 1.2;
+      justify-content: center;
       text-align: center;
+      width: $global-module-size * 1.2;
     }
   }
 }

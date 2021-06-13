@@ -4,8 +4,9 @@ $componente-name: "l-header";
   align-items: center;
   background-color: map-color(map-white);
   border-bottom: rem(1) lighten(map-color(map-header-background), 10%) solid;
+  color: map-color(map-main-fore1);
   display: grid;
-  grid-template-columns: ($global-module-size * 4) repeat(3, 1fr);
+  grid-template-columns: ($global-module-size * 4) repeat(3, auto);
   height: ($global-module-size * 1.64);
   margin: 0 auto;
   max-width: $global-max-width;
@@ -16,10 +17,10 @@ $componente-name: "l-header";
   width: 100%;
 
   @include breakpoint(small-medium-up) {
-    grid-template-columns: ($global-module-size * 4) repeat(2, 1fr);
+    grid-template-columns: ($global-module-size * 4) repeat(2, auto);
   }
 
   @include breakpoint(medium-up) {
-    grid-template-columns: ($global-module-size * 5) repeat(2, 1fr);
+    grid-template-columns: ($global-module-size * 5) repeat(2, auto);
   }
 }

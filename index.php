@@ -20,16 +20,18 @@
 <body>
  <div class="l-body">
 
-  <header data-reactroot role="banner" class="l-sidebar js-open-menu">
-   <?php
-            include 'app/views/sidebar.php';
-        ?>
-  </header>
   <header class="l-header">
    <?php
                 include 'app/views/header.php';
-            ?>
+        ?>
   </header>
+
+  <aside data-reactroot role="banner" class="l-sidebar js-open-menu">
+   <?php
+            include 'app/views/sidebar.php';
+        ?>
+  </aside>
+
   <main class="l-main">
    <?php
         $pagina = 'home';

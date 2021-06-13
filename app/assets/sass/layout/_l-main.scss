@@ -7,6 +7,6 @@ $componente-name: "l-main";
   grid-area: main;
   grid: "header" ($global-module-size * 1.64) "content" 1fr / 1fr;
   margin: 0 auto;
-  width: 100%;
   row-gap: ($global-module-size / 2);
+  width: 100%;
 }
