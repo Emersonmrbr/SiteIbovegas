@@ -1,0 +1,113 @@
+$componente-name: "c-home";
+
+.#{$componente-name} {
+  display: grid;
+  gap: ($global-module-size / 2);
+  grid-area: content;
+  grid-template-columns: auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 ($global-module-size / 2);
+  width: 100%;
+  &__card {
+    background-color: map-color(map-white);
+    border-radius: $global-radius;
+    border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+      solid;
+    box-shadow: rem(1) rem(1)
+      darken($color: map-color(map-main-background), $amount: 10%);
+    color: inherit;
+    height: auto;
+    padding: ($global-module-size / 2);
+    width: auto;
+  }
+  &__name {
+    display: flex;
+    font-size: $global-font-size-large;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__icon {
+    width: ($global-module-size / 2);
+    height: auto;
+    margin-right: ($global-module-size / 10);
+  }
+  &__trader {
+    flex: 1;
+    font-size: $global-font-size-larger;
+  }
+  &__values {
+    display: grid;
+    gap: ($global-module-size / 10);
+    grid-template-columns: repeat(2, 1fr);
+    @include breakpoint(small-up) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(large-up) {
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: ($global-module-size / 10);
+    }
+  }
+  &__table {
+    background-color: inherit;
+    border-radius: $global-radius;
+    border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+      solid;
+    box-shadow: rem(1) rem(1)
+      darken($color: map-color(map-main-background), $amount: 10%);
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  &__title-item {
+    align-self: center;
+    background-color: map-color(map-header-background);
+    color: map-color(map-header-fore);
+    font-size: $global-font-size-medium;
+    height: ($global-module-size * 1.2);
+    justify-self: center;
+    margin: 0;
+    padding: ($global-module-size / 8);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  &__content-item {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    color: map-color(map-header-background);
+    flex: 1;
+    font-size: $global-font-size-medium;
+    justify-self: center;
+    padding: 0 ($global-module-size / 10);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  &__ranking {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      background-color: map-color(map-header-background);
+      color: map-color(map-header-fore);
+      font-size: $global-font-size-larger;
+      font-weight: $global-font-weight-bolder;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      border: 1px solid map-color(map-header-background);
+      width: $global-module-size * 1.2;
+      height: $global-module-size * 1.2;
+      text-align: center;
+    }
+  }
+}

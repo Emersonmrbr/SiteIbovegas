@@ -12,12 +12,19 @@ $componente-name: "l-sidebar";
   overflow: hidden;
   z-index: z-index(above);
   transition: $transition-function-header;
+  top: ($global-module-size * 1.64);
   &.is-open {
     width: ($global-module-size * 4);
+
     @include breakpoint(medium-up) {
       width: ($global-module-size * 5);
     }
   }
+
+  @include breakpoint(small-medium-up) {
+    width: ($global-module-size * 4);
+  }
+
   @include breakpoint(medium-up) {
     width: ($global-module-size * 5);
   }

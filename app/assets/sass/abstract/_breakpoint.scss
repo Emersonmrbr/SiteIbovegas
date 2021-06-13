@@ -2,13 +2,13 @@
 
 @mixin breakpoint($point) {
   @if $point == small-only {
-    @media (max-width: 37.4375em) {
-      // 599px
+    @media (max-width: 40,5625em) {
+      // 649px
       @content;
     }
   } @else if $point == small-up {
-    @media (min-width: 37.5em) {
-      // 600px
+    @media (min-width: 40,625em) {
+      // 650px
       @content;
     }
   }
@@ -44,13 +44,13 @@
       @content;
     }
   } @else if $point == large-only {
-    @media (max-width: 74.9375em) {
-      // 1199px
+    @media (max-width: 76,5625em) {
+      // 1225px
       @content;
     }
   } @else if $point == large-up {
-    @media (min-width: 75em) {
-      // 1200px
+    @media (min-width: 76.625em) {
+      // 1226px
       @content;
     }
   } @else if $point == extra-large-only {

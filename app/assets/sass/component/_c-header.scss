@@ -6,13 +6,40 @@ $slice-margin: ($global-module-size / 10);
 $slice-translate: $slice-height-big / 2;
 
 .#{$componente-name} {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: auto;
-  text-transform: capitalize;
-  width: 100%;
-  @include breakpoint(medium-up) {
+  &__logo {
+    align-items: center;
+    background-color: map-color(map-white);
+    display: flex;
+    grid-column: 1/2;
+    height: 100%;
+    padding: 0 ($global-module-size / 2.5);
+    transition: $transition-function-header;
+    width: 100%;
+    &.is-open {
+      background-color: map-color(map-header-background);
+    }
+
+    @include breakpoint(small-medium-up) {
+      background-color: map-color(map-header-background);
+    }
+  }
+  &__component {
+    fill: map-color(map-black);
+    transition: $transition-function-header;
+    width: ($global-module-size * 2.4);
+    @include breakpoint(small-medium-up) {
+      width: ($global-module-size * 3);
+      fill: map-color(map-header-fore);
+    }
+    @include breakpoint(medium-up) {
+      width: ($global-module-size * 4);
+    }
+    &.is-open {
+      fill: map-color(map-header-fore);
+    }
+  }
+  &__item {
+    transform: matrix(3.7480855, 0, 0, 3.7480855, -112.07463, -129.50111);
   }
 
   &__button {
@@ -21,12 +48,14 @@ $slice-translate: $slice-height-big / 2;
     border: none;
     cursor: pointer;
     display: block;
-    grid-area: button;
+    grid-column: 4/5;
     height: auto;
-    padding: 0;
+    justify-self: flex-end;
+    padding: 0 ($global-module-size / 2.5);
     transition: $transition-function-header;
     width: auto;
-    @include breakpoint(medium-up) {
+
+    @include breakpoint(small-medium-up) {
       display: none;
     }
   }
@@ -68,5 +97,17 @@ $slice-translate: $slice-height-big / 2;
       transform-origin: 50% 50%;
       transform: translatey(-#{$slice-translate}) rotate(-45deg);
     }
+  }
+  &__title {
+    grid-column: 2/3;
+    justify-self: flex-start;
+    padding: 0 ($global-module-size / 2.5);
+    width: auto;
+  }
+  &__slogan {
+    grid-column: 3/4;
+    justify-self: center;
+    text-transform: none;
+    width: auto;
   }
 }

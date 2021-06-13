@@ -25,12 +25,12 @@
             include 'app/views/sidebar.php';
         ?>
   </header>
-  <main class="l-main">
-   <header class="l-header">
-    <?php
+  <header class="l-header">
+   <?php
                 include 'app/views/header.php';
             ?>
-   </header>
+  </header>
+  <main class="l-main">
    <?php
         $pagina = 'home';
         $pagina = $_GET["pagina"];
