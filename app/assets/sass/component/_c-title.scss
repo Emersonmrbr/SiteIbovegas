@@ -1,0 +1,21 @@
+$componente-name: "c-title";
+
+.#{$componente-name} {
+  grid-column: 2/3;
+  justify-self: flex-start;
+  margin: 0;
+  padding: 0 ($global-module-size / 2.5);
+  text-transform: uppercase;
+  width: auto;
+  font-size: $global-font-size-large;
+  &--card {
+    font-size: $global-font-size-large;
+    grid-column: trader;
+    grid-row: identity;
+    padding: ($global-module-size / 4);
+    text-transform: none;
+  }
+  &--form {
+    padding: 0;
+  }
+}

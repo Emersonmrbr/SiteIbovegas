@@ -1,27 +1,25 @@
 $componente-name: "l-header";
 
 .#{$componente-name} {
-  align-items: center;
   background-color: map-color(map-white);
   border-bottom: rem(1) lighten(map-color(map-header-background), 10%) solid;
   color: map-color(map-main-fore1);
   display: grid;
-  grid-template-columns: ($global-module-size * 4) repeat(3, auto);
-  height: ($global-module-size * 1.64);
-  margin: 0 auto;
+  grid-template-columns: $global-width-aside-mobile repeat(2, 1fr);
+  height: $global-height-header;
   max-width: $global-max-width;
   overflow: hidden;
   position: fixed;
-  text-transform: capitalize;
   transition: $transition-function-header;
   width: 100%;
   z-index: z-index(above);
+  place-items: center;
 
-  @include breakpoint(small-medium-up) {
-    grid-template-columns: ($global-module-size * 4) repeat(2, auto);
+  @include breakpoint(640-up) {
+    grid-template-columns: $global-width-aside-mobile 1fr;
   }
 
-  @include breakpoint(medium-up) {
-    grid-template-columns: ($global-module-size * 5) repeat(2, auto);
+  @include breakpoint(1280-up) {
+    grid-template-columns: $global-width-aside 1fr;
   }
 }

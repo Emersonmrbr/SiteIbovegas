@@ -1,0 +1,20 @@
+$componente-name: "c-card";
+
+.#{$componente-name} {
+  box-shadow: rem(1) rem(1)
+    darken($color: map-color(map-main-background), $amount: 10%);
+  background-color: map-color(map-white);
+  border-radius: $global-radius;
+  border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+    solid;
+  color: inherit;
+  display: grid;
+  gap: ($global-module-size / 5);
+  grid-template-columns: [icon] auto [trader] 1fr;
+  grid-template-rows: [identity] auto [bunner] auto [ranking] auto;
+  height: auto;
+  padding: ($global-module-size / 4);
+  place-items: center;
+  width: 100%;
+  max-width: ($global-module-size * 16);
+}

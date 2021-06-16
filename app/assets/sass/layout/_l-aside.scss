@@ -1,4 +1,4 @@
-$componente-name: "l-sidebar";
+$componente-name: "l-aside";
 
 .#{$componente-name} {
   background-color: map-color(map-header-background);
@@ -6,7 +6,6 @@ $componente-name: "l-sidebar";
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 auto;
   overflow: hidden;
   position: fixed;
   top: ($global-module-size * 1.64);
@@ -14,18 +13,18 @@ $componente-name: "l-sidebar";
   width: 0;
   z-index: z-index(above);
   &.is-open {
-    width: ($global-module-size * 4);
+    width: ($global-module-size * 3);
 
-    @include breakpoint(medium-up) {
-      width: ($global-module-size * 5);
+    @include breakpoint(1280-up) {
+      width: ($global-module-size * 4);
     }
   }
 
-  @include breakpoint(small-medium-up) {
-    width: ($global-module-size * 4);
+  @include breakpoint(640-up) {
+    width: ($global-module-size * 3);
   }
 
-  @include breakpoint(medium-up) {
-    width: ($global-module-size * 5);
+  @include breakpoint(1280-up) {
+    width: ($global-module-size * 4);
   }
 }

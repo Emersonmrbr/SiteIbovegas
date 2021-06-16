@@ -1,17 +1,18 @@
 $componente-name: "l-body";
 
 .#{$componente-name} {
-  background-color: map-color(map-white);
+  background-color: map-color(map-body-background);
   display: grid;
-  grid: "sidebar main" auto "sidebar main " auto/ auto 3fr;
+  grid-template-columns: [aside] auto [main] 1fr;
+  grid-template-rows: [header] $global-height-header [main] 1fr;
   margin: 0 auto;
   max-width: $global-max-width;
 
-  @include breakpoint(small-medium-up) {
-    grid: "sidebar main" auto "sidebar main " auto/ ($global-module-size * 4) 1fr;
+  @include breakpoint(640-up) {
+    grid-template-columns: [aside] $global-width-aside-mobile [main] 1fr;
   }
 
-  @include breakpoint(medium-up) {
-    grid: "sidebar main" auto "sidebar main " auto/ ($global-module-size * 5) 1fr;
+  @include breakpoint(1280-up) {
+    grid-template-columns: [aside] $global-width-aside [main] 1fr;
   }
 }

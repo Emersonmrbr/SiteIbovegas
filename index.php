@@ -17,46 +17,44 @@
         ?>
 </head>
 
-<body>
- <div class="l-body">
+<body class="l-body">
 
-  <header class="l-header">
-   <?php
+ <header class="l-header">
+  <?php
                 include 'app/views/header.php';
         ?>
-  </header>
+ </header>
 
-  <aside data-reactroot role="banner" class="l-sidebar js-open-menu">
-   <?php
-            include 'app/views/sidebar.php';
+ <aside class="l-aside js-open-menu">
+  <?php
+            include 'app/views/aside.php';
         ?>
-  </aside>
+ </aside>
 
-  <main class="l-main">
-   <?php
+ <main class="l-main">
+  <?php
         $pagina = 'home';
         $pagina = $_GET["pagina"];
         switch ($pagina) {
             case 'trade':
                 include 'app/views/trade.php';
                 break;
-            case 'traders':
-                include 'app/views/traders.php';
-                break;
-            case 'help':
-                include 'app/views/help.php';
-                break;
-            case 'singup':
-                include 'app/views/singup.php';
-                break;
+            // case 'traders':
+            //     include 'app/views/traders.php';
+            //     break;
+            // case 'help':
+            //     include 'app/views/help.php';
+            //     break;
+            // case 'singup':
+            //     include 'app/views/singup.php';
+            //     break;
             default:
                 include 'app/views/home.php';
                 break;
         }
 ?>
-  </main>
+ </main>
 
- </div>
  <script src="app/assets/js/index.js"></script>
 </body>
 

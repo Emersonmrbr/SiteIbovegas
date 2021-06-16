@@ -1,0 +1,37 @@
+$componente-name: "c-form";
+
+.#{$componente-name} {
+  box-shadow: rem(1) rem(1)
+    darken($color: map-color(map-main-background), $amount: 10%);
+  background-color: map-color(map-white);
+  border-radius: $global-radius;
+  border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+    solid;
+  color: inherit;
+  display: flex;
+  gap: ($global-module-size / 5);
+  flex-direction: column;
+  height: auto;
+  padding: ($global-module-size / 4);
+  width: 100%;
+  max-width: ($global-module-size * 16);
+
+  &__label {
+    width: 100%;
+    height: ($global-module-size / 1.2);
+    display: flex;
+    align-items: flex-end;
+    cursor: default;
+    text-transform: uppercase;
+  }
+  &__input {
+    width: 100%;
+    height: ($global-module-size / 1.2);
+    border-radius: $global-radius / 2;
+    text-transform: uppercase;
+  }
+}
+
+.c-trade__list {
+  text-transform: uppercase;
+}

@@ -1,0 +1,13 @@
+$componente-name: "c-icon";
+
+.#{$componente-name} {
+  height: auto;
+  margin-right: ($global-module-size / 10);
+  width: ($global-module-size / 2);
+  grid-column: icon;
+  grid-row: identity;
+  &--card {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,25 @@
+$componente-name: "c-ranking";
+
+.#{$componente-name} {
+  align-items: center;
+  background-color: map-color(map-header-background);
+  border-radius: 100%;
+  border: 1px solid map-color(map-header-background);
+  color: map-color(map-header-fore);
+  display: flex;
+  font-size: $global-font-size-larger;
+  font-weight: $global-font-weight-bolder;
+  grid-column: trader;
+  grid-row: ranking;
+  height: $global-module-size * 1.2;
+  justify-content: center;
+  justify-self: flex-end;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: $global-module-size * 1.2;
+  &__item {
+    margin: 0;
+    padding: 0;
+  }
+}

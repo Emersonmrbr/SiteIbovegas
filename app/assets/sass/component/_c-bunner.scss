@@ -1,0 +1,61 @@
+$componente-name: "c-bunner";
+
+.#{$componente-name} {
+  color: inherit;
+  display: grid;
+  gap: ($global-module-size / 10);
+  grid-column: icon / trade;
+  grid-row: bunner;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+  @include breakpoint(320-up) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(960-up) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__table {
+    background-image: linear-gradient(
+      0deg,
+      lighten($color: map-color(map-header-fore), $amount: 35%),
+      map-color(map-white)
+    );
+    border-radius: $global-radius;
+    border: rem(1) darken($color: map-color(map-main-background), $amount: 10%)
+      solid;
+    box-shadow: rem(1) rem(1)
+      darken($color: map-color(map-main-background), $amount: 10%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    place-items: center;
+    width: 100%;
+  }
+  &__title {
+    color: map-color(map-header-fore);
+    font-size: $global-font-size-small;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    margin: 0;
+    padding: ($global-module-size / 5);
+    text-transform: uppercase;
+  }
+  &__value {
+    font-size: $global-font-size-larger;
+    grid-column: 1/3;
+    grid-row: 2;
+    margin: 0;
+    padding: ($global-module-size / 2.5) ($global-module-size / 10);
+    text-transform: uppercase;
+    &--left {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    &--right {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+}

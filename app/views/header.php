@@ -1,10 +1,13 @@
-<a href="?pagina=home" class="c-header__logo js-open-menu">
- <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 328.08332 81.227085"
-  class="c-header__component js-open-menu">
-  <g class="c-header__item js-open-menu">
+<?php
+$pagina = $_GET["pagina"];
+?>
+<a href="?pagina=home" class="c-logo js-open-menu">
+ <svg class="c-logo__component js-open-menu" xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 328.08332 81.227085">
+  <g class="c-logo__item js-open-menu">
    <path
     d="M 32.106948,51.505576 H 30.06745 V 39.577265 h 2.039498 z m -2.204863,-15.09229 q 0,-0.496094 0.297656,-0.837848 0.308681,-0.341754 0.903994,-0.341754 0.595314,0 0.903994,0.341754 0.308681,0.341754 0.308681,0.837848 0,0.496094 -0.308681,0.826824 -0.30868,0.330729 -0.903994,0.330729 -0.595313,0 -0.903994,-0.330729 -0.297656,-0.33073 -0.297656,-0.826824 z" />
    <path
@@ -24,11 +27,12 @@
   </g>
  </svg>
 </a>
-<p class="c-header__title">Home</p>
-<p class="c-header__slogan">Traders ranking</p>
+<p class="c-title">
+ <?php echo $pagina ?>
+</p>
 
-<button class="c-header__button" onclick="openMobileMenu()">
- <div class="c-header__slice-up  js-open-menu"></div>
- <div class="c-header__slice-middle  js-open-menu"></div>
- <div class="c-header__slice-down  js-open-menu"></div>
+<button class="c-button-nav" onclick="openMobileMenu()">
+ <div class="c-button-nav__slice-up  js-open-menu"></div>
+ <div class="c-button-nav__slice-middle  js-open-menu"></div>
+ <div class="c-button-nav__slice-down  js-open-menu"></div>
 </button>

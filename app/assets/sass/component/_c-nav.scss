@@ -1,0 +1,12 @@
+$componente-name: "c-nav";
+
+.#{$componente-name} {
+  color: inherit;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+}

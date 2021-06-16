@@ -1,0 +1,48 @@
+$componente-name: "c-logo";
+
+.#{$componente-name} {
+  align-items: center;
+  background-color: map-color(map-white);
+  background-image: linear-gradient(
+    to right,
+    map-color(map-white) 50%,
+    map-color(map-header-background) 50%
+  );
+  background-size: 200% 100%;
+  display: flex;
+  grid-column: 1/2;
+  height: 100%;
+  padding: 0 ($global-module-size / 2.5);
+  transition: $transition-function-header;
+  width: 100%;
+  &.is-open {
+    background-position: -100% 100%;
+  }
+
+  @include breakpoint(640-up) {
+    background-position: -100% 100%;
+  }
+
+  &__component {
+    fill: map-color(map-black);
+    transition: $transition-function-header;
+    width: ($global-module-size * 2.4);
+
+    @include breakpoint(640-up) {
+      fill: map-color(map-header-fore);
+      width: $global-width-aside-mobile;
+    }
+
+    @include breakpoint(1280-up) {
+      width: $global-width-aside;
+    }
+
+    &.is-open {
+      fill: map-color(map-header-fore);
+      transition: $transition-function-header;
+    }
+  }
+  &__item {
+    transform: matrix(3.7480855, 0, 0, 3.7480855, -112.07463, -129.50111);
+  }
+}
